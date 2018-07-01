@@ -1,4 +1,4 @@
-package com.oleksii.pchelintsev.squares;
+package com.oleksii.pchelintsev.square;
 
 import com.oleksii.pchelintsev.AbstractShape;
 import com.oleksii.pchelintsev.Shape;
@@ -15,7 +15,7 @@ public class Square extends AbstractShape{
 	public void print() {
 		System.out.println(this);
 	}
-
+	@Override
 	public double getArea() {
         return side*side;
 	}

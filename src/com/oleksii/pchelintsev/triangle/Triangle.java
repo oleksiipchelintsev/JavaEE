@@ -1,4 +1,4 @@
-package com.oleksii.pchelintsev.triangles;
+package com.oleksii.pchelintsev.triangle;
 
 import com.oleksii.pchelintsev.AbstractShape;
 import com.oleksii.pchelintsev.Shape;
@@ -18,7 +18,7 @@ public class Triangle extends AbstractShape{
 	public void print() {
 		System.out.println(this);
 	}
-
+	@Override
 	public double getArea() {
 		double p = (sideA + sideB + sideC) / 2;
         return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));

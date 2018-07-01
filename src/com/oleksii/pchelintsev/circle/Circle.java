@@ -1,14 +1,12 @@
-package com.oleksii.pchelintsev.circles;
+package com.oleksii.pchelintsev.circle;
 
 import com.oleksii.pchelintsev.AbstractShape;
 import com.oleksii.pchelintsev.Shape;
 
 public class Circle extends AbstractShape{
-	private Point point;
 	private int r;
 	
-	public Circle(Point point, int r){
-		this.point = point;
+	public Circle(int r){
 		this.r = r;
 	}
 	
@@ -16,13 +14,13 @@ public class Circle extends AbstractShape{
 	public void print() {
 		System.out.println(this);
 	}
-
+	@Override
 	public double getArea() {
         return Math.PI*r*r;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Circle (%d,%d), Radius: %d ", point.getX(), point.getY(), r) ;
+		return String.format("Circle, Radius: %d ", r) ;
 	}
 }
