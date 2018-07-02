@@ -21,7 +21,13 @@ public class Triangle extends AbstractShape{
 	@Override
 	public double getArea() {
 		double p = (sideA + sideB + sideC) / 2;
-		return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+		if (sideA + sideB <= sideC || sideB + sideC <= sideA || sideA + sideC <= sideB) {
+			   return 0.0;	//not a triangle
+		} else {
+			return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+		}
+		
+		
 	}
 
 	@Override

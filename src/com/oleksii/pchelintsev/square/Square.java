@@ -17,6 +17,9 @@ public class Square extends AbstractShape{
 	}
 	@Override
 	public double getArea() {
+		if(side<0) {
+			return 0.0;
+		}
         return side*side;
 	}
 

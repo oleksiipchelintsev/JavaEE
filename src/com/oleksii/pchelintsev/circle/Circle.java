@@ -16,7 +16,11 @@ public class Circle extends AbstractShape{
 	}
 	@Override
 	public double getArea() {
-        return Math.PI*r*r;
+		if(r<0 || r==0) {
+			return 0;
+		}else {
+			return Math.PI*r*r;
+		}
 	}
 
 	@Override

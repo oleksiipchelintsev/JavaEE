@@ -18,30 +18,104 @@ import junit.framework.Assert;
 
 public class TetsShapes {
 		
+	
+	
 	@Rule 
 	public final Timeout time = new Timeout(1000);
 	
-	@Test
-	public void testTriangleArea() {
-		Triangle triangle = new Triangle(3, 4, 5);
-		double triangleArea = triangle.getArea();
-		Assert.assertTrue(triangleArea == 6);
-	}
-	@Test
-	public void testCircleArea() {
-		Circle circle = new Circle(5);
-		double circleArea = circle.getArea();
-		Assert.assertTrue(circleArea == 25*Math.PI);
-	}
-	@Test
-	public void testSquareArea() {
-		Square square = new Square(5);
-		double squareArea = square.getArea();
-		Assert.assertTrue(squareArea == 25);
-	}
+	private static final double DELTA = 1e-15; 
+	 
+	 
+	 //Triangle tests
+	
+	 @Test
+	 public void testGetTriangleArea(){
+	  int a = 3;
+	  int b = 4;
+	  int c = 5;
+	  Assert.assertEquals(6.0 ,(new Triangle(a,b,c)).getArea(), DELTA);
+	  System.out.println("a=3, b=4, c=5 Test is successful!");
+	 }
+	 
+	 @Test
+	 public void testGetTriangleArea2(){
+	  int a = 1;
+	  int b = 4;  // This can not be a triangle!
+	  int c = 7; 
+	  Assert.assertEquals(0.0 , (new Triangle(a,b,c)).getArea(), DELTA);
+	  System.out.println("a=1, b=4, c=7 Test is successful!");
+	 }
+	 @Test
+	 public void testGetTriangleArea3(){
+	  int a = 3;
+	  int b = 3;  // This can not be a triangle!
+	  int c = 8; 
+	  Assert.assertEquals(0.0 , (new Triangle(a,b,c)).getArea(), DELTA);
+	  System.out.println("a=3, b=3, c=8 Test is successful!");
+	 }  
 	
 	
 	
+	 	//Circle tests
+	 
+		@Test
+		public void testGetCircleArea1() {
+			int r = 0;
+			Circle circle = new Circle(r);
+			double circleArea = circle.getArea();
+			Assert.assertEquals(0.0 , circleArea, DELTA);
+		}
+	
+		@Test
+		public void testGetCircleArea2() {
+			int r = 1;
+			Circle circle = new Circle(r);
+			double circleArea = circle.getArea();
+			Assert.assertEquals(Math.PI, circleArea, DELTA);
+		}
+	
+		@Test
+		public void testGetCircleArea3() {
+			int r = 5;
+			Circle circle = new Circle(r);
+			double circleArea = circle.getArea();
+			Assert.assertEquals(Math.PI*25, circleArea, DELTA);
+		}
+	
+		@Test
+		public void testGetCircleArea5() {
+			int r = -1;
+			Circle circle = new Circle(r);
+			double circleArea = circle.getArea();
+			Assert.assertEquals(0.0, circleArea, DELTA);
+		}
+		
+		//Square tests
+		
+		@Test
+		public void testGetSquareArea1() {
+			int side = 0;
+			Square square = new Square(side);
+			double squareArea = square.getArea();
+			Assert.assertEquals(0.0 , squareArea, DELTA);
+		}
+		
+		@Test
+		public void testGetSquareArea2() {
+			int side = 5;
+			Square square = new Square(side);
+			double squareArea = square.getArea();
+			Assert.assertEquals(25.0 , squareArea, DELTA);
+		}
+		
+		@Test
+		public void testGetSquareArea3() {
+			int side = -1;
+			Square square = new Square(side);
+			double squareArea = square.getArea();
+			Assert.assertEquals(0.0 , squareArea, DELTA);
+		}
+		
 //	@Test (expected=Exception.class)
 //	public void testAreaException() {
 //		Triangle triangle = new Triangle(3, 4, 5);
