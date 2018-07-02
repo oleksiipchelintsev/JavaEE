@@ -36,8 +36,8 @@ public class Main {
 //			
 //		});
 		
-		logger.info(new Circle(5).toString());
-		logger.info(new Triangle(3,4,5).toString());
-		logger.info(new Square(10).toString());
+		logger.info(String.valueOf((new Circle(5).getArea())));
+		logger.info(String.valueOf(new Triangle(3,4,5).getArea()));
+		logger.info(String.valueOf(new Square(10).getArea()));
 	}
 }
