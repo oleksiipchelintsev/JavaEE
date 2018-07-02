@@ -22,6 +22,6 @@ public class Square extends AbstractShape{
 
 	@Override
 	public String toString() {
-		return "Triangle: side: " + side;
+		return "Square: side: " + side;
 	}
 }
