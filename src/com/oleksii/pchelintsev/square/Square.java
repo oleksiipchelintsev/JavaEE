@@ -1,7 +1,7 @@
-package main.com.oleksii.pchelintsev.square;
+package com.oleksii.pchelintsev.square;
 
-import main.com.oleksii.pchelintsev.AbstractShape;
-import main.com.oleksii.pchelintsev.Shape;
+import com.oleksii.pchelintsev.AbstractShape;
+import com.oleksii.pchelintsev.Shape;
 
 public class Square extends AbstractShape{
 

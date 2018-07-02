@@ -1,4 +1,4 @@
-package tests.com.oleksii.pchelintsev;
+package com.oleksii.pchelintsev;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -10,10 +10,11 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.Timeout;
 
+import com.oleksii.pchelintsev.circle.Circle;
+import com.oleksii.pchelintsev.square.Square;
+import com.oleksii.pchelintsev.triangle.Triangle;
+
 import junit.framework.Assert;
-import main.com.oleksii.pchelintsev.circle.Circle;
-import main.com.oleksii.pchelintsev.square.Square;
-import main.com.oleksii.pchelintsev.triangle.Triangle;
 
 public class TetsShapes {
 		

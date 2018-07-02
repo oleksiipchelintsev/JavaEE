@@ -1,4 +1,4 @@
-package main.com.oleksii.pchelintsev;
+package com.oleksii.pchelintsev;
 
 import java.io.IOException;
 import java.util.Date;
@@ -8,9 +8,9 @@ import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
-import main.com.oleksii.pchelintsev.circle.Circle;
-import main.com.oleksii.pchelintsev.square.Square;
-import main.com.oleksii.pchelintsev.triangle.Triangle;
+import com.oleksii.pchelintsev.circle.Circle;
+import com.oleksii.pchelintsev.square.Square;
+import com.oleksii.pchelintsev.triangle.Triangle;
 
 public class Main {
 

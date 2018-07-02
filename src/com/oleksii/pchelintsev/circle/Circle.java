@@ -1,7 +1,7 @@
-package main.com.oleksii.pchelintsev.circle;
+package com.oleksii.pchelintsev.circle;
 
-import main.com.oleksii.pchelintsev.AbstractShape;
-import main.com.oleksii.pchelintsev.Shape;
+import com.oleksii.pchelintsev.AbstractShape;
+import com.oleksii.pchelintsev.Shape;
 
 public class Circle extends AbstractShape{
 	private int r;

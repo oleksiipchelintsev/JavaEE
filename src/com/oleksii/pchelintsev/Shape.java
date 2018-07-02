@@ -1,4 +1,4 @@
-package main.com.oleksii.pchelintsev;
+package com.oleksii.pchelintsev;
 
 public interface Shape {
 	void print();

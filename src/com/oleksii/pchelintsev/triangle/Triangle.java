@@ -1,7 +1,7 @@
-package main.com.oleksii.pchelintsev.triangle;
+package com.oleksii.pchelintsev.triangle;
 
-import main.com.oleksii.pchelintsev.AbstractShape;
-import main.com.oleksii.pchelintsev.Shape;
+import com.oleksii.pchelintsev.AbstractShape;
+import com.oleksii.pchelintsev.Shape;
 
 public class Triangle extends AbstractShape{
 	private int sideA;
