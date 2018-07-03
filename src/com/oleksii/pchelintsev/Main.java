@@ -1,7 +1,10 @@
 package com.oleksii.pchelintsev;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Formatter;
 import java.util.logging.Handler;
@@ -29,16 +32,28 @@ public class Main {
 		logger.setUseParentHandlers(false);
 		logger.addHandler(consoleHandler);
 		
-//		consoleHandler.setFilter(new Filter(){
-//			@Override
-//			public boolean isLoggable(LogRecord record) {
-//				return record.getMessage().endsWith("max");
-//			}
-//			
-//		});
 		
-		logger.info(String.valueOf((new Circle(5).getArea())));
-		logger.info(String.valueOf(new Triangle(3,4,5).getArea()));
-		logger.info(String.valueOf(new Square(10).getArea()));
+		List<Shape> figures = new ArrayList();
+		
+		figures.add(new Triangle(1000,1000,1000));
+		figures.add(new Triangle(3,4,5));
+		figures.add(new Triangle(6,7,8));
+		figures.add(new Triangle(2,2,2));
+		
+		figures.add(new Circle(5));
+		figures.add(new Circle(0));
+		figures.add(new Circle(100));
+		
+		figures.add(new Square(5));
+		figures.add(new Square(0));
+		figures.add(new Square(-10));
+		
+		
+		Shape maxShape = figures.stream().max(Comparator.comparing(Shape::getArea)).get();
+		Shape minShape = figures.stream().min(Comparator.comparing(Shape::getArea)).get();
+		
+		
+		logger.info(maxShape.getClass().getSimpleName() + " " + maxShape.getArea());
+		logger.info(minShape.getClass().getSimpleName() + " " + minShape.getArea());
 	}
 }
