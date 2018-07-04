@@ -64,8 +64,8 @@ public class BarDivision {
 				}
 		}
 		
-		for(DeclaredLine declaredline : outputList) { //Printing result //make like lambda
-			declaredline.showLine();
-		}
+		
+		//Show all objects (getting our print)
+		outputList.forEach(DeclaredLine::showLine);
 	}
 }
