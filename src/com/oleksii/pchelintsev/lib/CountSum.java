@@ -6,6 +6,7 @@ public class CountSum {
 		char[] strArr = str.toCharArray();
 		for(int i = 0; i<strArr.length; i++) {
 			accum+=Integer.parseInt(strArr[i]+"");
+			//accum+=Character.getNumericValue(strArr[i]-'0');
 		}
 		return accum;
 	}

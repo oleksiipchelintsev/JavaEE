@@ -22,7 +22,9 @@ class CountSumTest {
 		  assertThrows(NumberFormatException.class, ()->{
 			  String number = "AAAA";
 			  new CountSum().sumNumbers(number);
+			  System.out.println(new CountSum().sumNumbers(number));
 		  }, "a message");
+		  
 		  System.out.println("number = 12345, Test is successful!");
 	}
 	
@@ -48,12 +50,6 @@ class CountSumTest {
 		  Assert.assertEquals(0,(new CountSum().sumNumbers(number)));
 		  System.out.println("number = 0, Test is successful!");
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	

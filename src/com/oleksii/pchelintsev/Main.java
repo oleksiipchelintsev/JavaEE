@@ -14,6 +14,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.oleksii.pchelintsev.circle.Circle;
+import com.oleksii.pchelintsev.lib.BarDivision;
 import com.oleksii.pchelintsev.lib.Palindrom;
 import com.oleksii.pchelintsev.square.Square;
 import com.oleksii.pchelintsev.triangle.Triangle;
@@ -65,5 +66,21 @@ public class Main {
 		//Task 5 (Make method for IT)
 		Palindrom palindrom = new Palindrom();
 		logger.info(String.valueOf(palindrom.getMaxPalindrom()));
+		
+		
+		
+		//Task 6 (multiplication)
+		BarDivision barDivision = new BarDivision();
+		logger.info("Next One multiplication(12345, 123) \n");
+		barDivision.multiplication(12345, 123);
+		logger.info("Next One multiplication(12345, 11234)\n");
+		barDivision.multiplication(12345, 11234);
+		logger.info("Next One multiplication(123, 0) \n");
+		barDivision.multiplication(123, 0);
+		logger.info("Next One multiplication(0, 123) \n");
+		barDivision.multiplication(0, 123);
 	}
+	
+	
+	
 }
